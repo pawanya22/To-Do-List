@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Notion-Style To-Do List</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="app-container">
+        <header class="app-header">
+            <div class="logo-container">
+                <i class="fas fa-check-circle"></i>
+                <h1>Notion Tasks</h1>
+            </div>
+            <div class="theme-toggle">
+                <i class="fas fa-sun"></i>
+                <label class="switch">
+                    <input type="checkbox" id="theme-toggle">
+                    <span class="slider"></span>
+                </label>
+                <i class="fas fa-moon"></i>
+            </div>
+        </header>
+        
+        <div class="main-content">
+            <div class="sidebar">
+                <div class="sidebar-header">
+                    <h2>Projects</h2>
+                    <button class="add-btn">
+                        <i class="fas fa-plus"></i>
+                    </button>
+                </div>
+                <ul class="project-list">
+                    <li class="project-item active">
+                        <i class="fas fa-list"></i>
+                        <span>Personal Tasks</span>
+                    </li>
+                    <li class="project-item">
+                        <i class="fas fa-briefcase"></i>
+                        <span>Work Projects</span>
+                    </li>
+                    <li class="project-item">
+                        <i class="fas fa-shopping-cart"></i>
+                        <span>Shopping List</span>
+                    </li>
+                </ul>
+                <div class="sidebar-footer">
+                    <div class="user-profile">
+                        <div class="avatar">JD</div>
+                        <span>John Doe</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="content-area">
+                <div class="content-header">
+                    <h2>Personal Tasks</h2>
+                    <div class="search-container">
+                        <input type="text" placeholder="Search tasks..." class="search-input">
+                        <i class="fas fa-search"></i>
+                    </div>
+                </div>
+                
+                <div class="task-input-container">
+                    <input type="text" id="new-task-input" placeholder="Add a new task...">
+                    <button id="add-task-btn" class="primary-btn">
+                        <i class="fas fa-plus"></i> Add Task
+                    </button>
+                </div>
+                
+                <div class="task-filters">
+                    <div class="filter active">All</div>
+                    <div class="filter">Active</div>
+                    <div class="filter">Completed</div>
+                </div>
+                
+                <div class="tasks-container">
+                    <div class="task-list" id="task-list">
+                        <!-- Tasks will be dynamically added here -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
